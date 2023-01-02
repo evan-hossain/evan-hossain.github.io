@@ -1,7 +1,7 @@
 ---
 title: "Happy New Year 2023"
 date: 2023-01-02T20:05:37Z
-draft: true
+draft: false 
 ---
 I was looking to try something new during the December holidays in 2022. 
 This site is the result. As the first post in the new year, reflecting on 
