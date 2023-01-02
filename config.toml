@@ -1,0 +1,44 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Evan Hossain'
+theme = 'Anatole'
+
+[params]
+title = "Evan Hossain"
+description = "Software Engineer, Google"
+profilePicture = "images/profile.jpeg"
+contentratio = 0.7
+
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://www.linkedin.com/in/evan-hossain/"
+[[params.socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/evan-hossain/"
+[[params.socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:cse.evan@gmail.com"
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  identifier = "home"
+  weight = 100
+  url = "/"
+
+  [[menu.main]]
+  name = "Posts"
+  weight = 200
+  identifier = "post"
+  url = "/post/"
+
+  [[menu.main]]
+  name = "About"
+  weight = 300
+  identifier = "about"
+  url = "/about/"
+
