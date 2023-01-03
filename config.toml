@@ -8,6 +8,7 @@ title = "Evan Hossain"
 description = "Software Engineer, Google"
 profilePicture = "images/profile.jpeg"
 contentratio = 0.7
+gtagId = "G-K0HCZDVQ3Q"
 
 [[params.socialIcons]]
 icon = "fab fa-linkedin"
