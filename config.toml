@@ -1,7 +1,7 @@
 baseURL = 'https://evan-hossain.github.io'
 languageCode = 'en-us'
 title = 'Evan Hossain'
-theme = 'Anatole'
+theme = 'anatole'
 
 [params]
 title = "Evan Hossain"
