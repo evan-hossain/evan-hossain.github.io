@@ -5,7 +5,10 @@ theme = 'anatole'
 
 [params]
 title = "Evan Hossain"
-description = "Software Engineer, Google"
+description = """
+Software Engineer, Google
+Dublin, Ireland
+"""
 profilePicture = "images/profile.jpeg"
 contentratio = 0.7
 gtagId = "G-K0HCZDVQ3Q"
