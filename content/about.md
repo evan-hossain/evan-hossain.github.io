@@ -1,7 +1,6 @@
 +++
 +++
 
-# Employment
 ## Software Engineer | Google, Ireland
 ### Apr 2022-Present
 #### Cloud Web
