@@ -9,10 +9,10 @@ Working on various products and ideas to provide a better experience to the [Goo
 ## Senior Software Engineer | Grab, Singapore
 ### March 2018 - Dec 2021
 #### Geo
-* Designed and developed a real time road incident crowdsourcing system.
+* Designed and developed a real time road incident crowd sourcing system.
 * Promoted to Senior Software Engineer role in April 2020.
 * Designed and implemented a system to fill missing road properties and smoothen existing data over continuous road segments.
-* Guided and helped an intern engineer to realize an idea to identify disconnected road segments. Later presented the work at [State of the Map 2020](https://2020.stateofthemap.org), available at [youtube](https://www.youtube.com/watch?v=YkHC1bHdMMQ) as well.
+* Guided and helped an intern engineer to realize an idea to identify disconnected road segments. Later presented the work at [State of the Map 2020](https://2020.stateofthemap.org), available at [YouTube](https://www.youtube.com/watch?v=YkHC1bHdMMQ) as well.
 * Redesigned and implemented an internal tool to execute millions of offline routing requests, making it 10x faster. 
 #### Growth
 * Redesigned the configuration management system for driver app feed to allow more controlled rollouts.

@@ -11,7 +11,7 @@ the past year is probably a good start.
 some time with my family at home. As a result, I was able to spend the first few months at home with my loved ones.
 Attended gatherings, parties, weddings, went on family tours, and of course just stayed at home. 
 
-In the meantime, I was also working on the paperworks, work pass and visa related things for moving to Dublin, Ireland.
+In the meantime, I was also working on the paperwork, work pass and visa related things for moving to Dublin, Ireland.
 This part wasn't easy. Due to long queues from the Covid restricted times, every step took significantly longer than usual.
  
 Finally, arrived at Dublin on 5th April and started at Google on 11th. The offices were opening around the same time after Covid, so both Nooglers and Googlers who joined during the pandemic were exploring the offices together for the first time. Few of my friends were already working here at Google and other companies. It was nice to reunite with them, and made some new friends as well!
