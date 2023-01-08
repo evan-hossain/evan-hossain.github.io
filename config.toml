@@ -67,3 +67,8 @@ url = "mailto:cse.evan@gmail.com"
 [[related.indices]]
   name = 'tags'
   weight = 80
+
+[sitemap]
+  changefreq = 'always'
+  filename = 'sitemap.xml'
+  priority = 0.5
