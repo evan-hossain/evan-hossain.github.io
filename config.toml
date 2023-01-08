@@ -2,6 +2,7 @@ baseURL = 'https://evan-hossain.github.io'
 languageCode = 'en-us'
 title = 'Evan Hossain'
 theme = 'anatole'
+summaryLength = 20
 
 [params]
 title = "Evan Hossain"
@@ -12,6 +13,9 @@ Dublin, Ireland
 profilePicture = "images/profile.jpeg"
 contentratio = 0.7
 gtagId = "G-K0HCZDVQ3Q"
+readMore = true
+relatedPosts = true
+numberOfRelatedPosts = 3
 
 [[params.socialIcons]]
 icon = "fab fa-linkedin"
@@ -41,8 +45,24 @@ url = "mailto:cse.evan@gmail.com"
   url = "/post/"
 
   [[menu.main]]
-  name = "About"
+  name = "Kotlin"
   weight = 300
+  identifier = "kotlin"
+  url = "/kotlin/"
+
+  [[menu.main]]
+  name = "About"
+  weight = 400
   identifier = "about"
   url = "/about/"
 
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+[[related.indices]]
+  name = 'keywords'
+  weight = 100
+[[related.indices]]
+  name = 'tags'
+  weight = 80
