@@ -10,7 +10,7 @@
   <title>
     
         |
-        kotlin
+        Leetcode: Binary Tree Preorder Traversal in Kotlin
       
 
     
@@ -87,10 +87,9 @@ Dublin, Ireland
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-  <link rel="canonical" href="https://evan-hossain.github.io/tags/kotlin/" />
+  <link rel="canonical" href="https://evan-hossain.github.io/kotlin/lc-binary-tree-preorder-traversal/" />
 
   
-  <link rel="alternate" type="application/rss+xml" href="/tags/kotlin/index.xml" title="Evan Hossain" />
   
   
   
@@ -117,25 +116,102 @@ Dublin, Ireland
 
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="kotlin"/>
-<meta name="twitter:description" content="Software Engineer, Google
-Dublin, Ireland
-"/>
+<meta name="twitter:title" content="Leetcode: Binary Tree Preorder Traversal in Kotlin"/>
+<meta name="twitter:description" content="144. Binary Tree Preorder Traversal Given the root of a binary tree, return the preorder traversal of its nodes&rsquo; values."/>
 
 
 
   
-  <meta property="og:title" content="kotlin" />
-<meta property="og:description" content="Software Engineer, Google
-Dublin, Ireland
-" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://evan-hossain.github.io/tags/kotlin/" /><meta property="og:site_name" content="Evan Hossain" />
+  <meta property="og:title" content="Leetcode: Binary Tree Preorder Traversal in Kotlin" />
+<meta property="og:description" content="144. Binary Tree Preorder Traversal Given the root of a binary tree, return the preorder traversal of its nodes&rsquo; values." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://evan-hossain.github.io/kotlin/lc-binary-tree-preorder-traversal/" /><meta property="article:section" content="kotlin" />
+<meta property="article:published_time" content="2023-01-09T20:05:03+00:00" />
+<meta property="article:modified_time" content="2023-01-09T20:05:03+00:00" /><meta property="og:site_name" content="Evan Hossain" />
 
 
 
   
   
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "kotlin",
+        "name": "Leetcode: Binary Tree Preorder Traversal in Kotlin",
+        "headline": "Leetcode: Binary Tree Preorder Traversal in Kotlin",
+        "alternativeHeadline": "",
+        "description": "
+      
+        144. Binary Tree Preorder Traversal Given the root of a binary tree, return the preorder traversal of its nodes\u0026rsquo; values.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/evan-hossain.github.io\/kotlin\/lc-binary-tree-preorder-traversal\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-01-09T20:05:03.00Z",
+        "datePublished": "2023-01-09T20:05:03.00Z",
+        "dateModified": "2023-01-09T20:05:03.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name":  null ,
+            "url": "https://evan-hossain.github.io",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/evan-hossain.github.iofavicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "https:\/\/evan-hossain.github.io\/kotlin\/lc-binary-tree-preorder-traversal\/",
+        "wordCount" : "43",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "kotlin"
+
+    
+      
+        ,
+
+      
+      "leetcode"
+
+    ]
+    }
+  </script>
+
 
 </head>
 <body class="body">
@@ -326,69 +402,43 @@ Dublin, Ireland
 </div>
 </header>
   <div
-    class="archive 
+    class="post 
       animated fadeInDown
     "
   >
     
-      <div class="archive__heading">2023</div>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            <a class="archive__list-title" href="/kotlin/lc-binary-tree-preorder-traversal/" title="Leetcode: Binary Tree Preorder Traversal in Kotlin">Leetcode: Binary Tree Preorder Traversal in Kotlin</a>
-            <div class="archive__list-date">
-              
-                
-                  Jan 9
-                
+    <div class="post__content">
+      <h1>Leetcode: Binary Tree Preorder Traversal in Kotlin</h1>
+      <h2 id="144-binary-tree-preorder-traversal">144. Binary Tree Preorder Traversal</h2>
+<p>Given the root of a binary tree, return the preorder traversal of its nodes&rsquo; values.</p>
+<h2 id="solution">Solution</h2>
+<p>Traverse the tree in pre-order using DFS.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">preorderTraversal</span>(root: TreeNode?): List&lt;Int&gt; = <span style="color:#66d9ef">if</span> (root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) listOf()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> listOf(root.`val`).plus(preorderTraversal(root.left)).plus(preorderTraversal(root.right))
+</span></span></code></pre></div>
 
-              
-            </div>
-          </li>
-        </ul>
-      
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            <a class="archive__list-title" href="/kotlin/lc-max-points-on-a-line/" title="Leetcode: Max Points on a Line in Kotlin">Leetcode: Max Points on a Line in Kotlin</a>
-            <div class="archive__list-date">
-              
-                
-                  Jan 8
-                
+  <h3>Related Posts</h3>
+  <ul>
+    
+      <li><a href="/kotlin/lc-max-points-on-a-line/">Leetcode: Max Points on a Line in Kotlin</a></li>
+    
+      <li><a href="/kotlin/lc-gas-station/">Leetcode: Gas Station solution in kotlin</a></li>
+    
+      <li><a href="/post/learning-vim/">Learning Vim</a></li>
+    
+  </ul>
 
-              
-            </div>
-          </li>
-        </ul>
+</div>
+    <div class="post__footer">
       
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            <a class="archive__list-title" href="/post/learning-vim/" title="Learning Vim">Learning Vim</a>
-            <div class="archive__list-date">
-              
-                
-                  Jan 8
-                
 
-              
-            </div>
-          </li>
-        </ul>
       
-        <ul class="archive__list">
-          <li class="archive__list-item">
-            <a class="archive__list-title" href="/kotlin/lc-gas-station/" title="Leetcode: Gas Station solution in kotlin">Leetcode: Gas Station solution in kotlin</a>
-            <div class="archive__list-date">
-              
-                
-                  Jan 7
-                
+        <span><a class="tag" href="/tags/kotlin/">kotlin</a><a class="tag" href="/tags/leetcode/">leetcode</a></span>
 
-              
-            </div>
-          </li>
-        </ul>
+
       
+    </div>
 
     
   </div>
