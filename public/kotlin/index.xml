@@ -6,7 +6,18 @@
     <description>Recent content in Kotlins on Evan Hossain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Jan 2023 20:05:03 +0000</lastBuildDate><atom:link href="https://evan-hossain.github.io/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Jan 2023 16:48:41 +0000</lastBuildDate><atom:link href="https://evan-hossain.github.io/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode: Number of Good Paths Solution in Kotlin</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-number-of-good-paths/</link>
+      <pubDate>Sun, 15 Jan 2023 16:48:41 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-number-of-good-paths/</guid>
+      
+        <description>2421. Number of Good Paths Solution I found the problem somewhat harder than typical leetcode problems. My solution idea is as follows:</description>
+      
+    </item>
+    
     <item>
       <title>Leetcode: Binary Tree Preorder Traversal in Kotlin</title>
       <link>https://evan-hossain.github.io/kotlin/lc-binary-tree-preorder-traversal/</link>
