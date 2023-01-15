@@ -4,6 +4,7 @@ title = 'Evan Hossain'
 theme = 'anatole'
 summaryLength = 20
 disqusShortname = "evan-portfolio"
+# postSectionName = "Kotlin"
 
 [params]
 title = "Evan Hossain"

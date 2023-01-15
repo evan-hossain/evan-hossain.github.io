@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <title>
+    
+        |
+        Learning Vim
+      
+
+    
+
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.109.0"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="" />
+  <meta
+    name="description"
+    content="Software Engineer, Google
+Dublin, Ireland
+"
+  />
+  
+    <meta name="google-site-verification" content="-HcHMyg1C_v5T_MAHavmuOuJap7niqMo42q7sdJX_c4" />
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.99393b720daa0e4e122d508358dfaa568774f7a5871f48ec1a496f33e554dae6.css"
+      integrity="sha256-mTk7cg2qDk4SLVCDWN&#43;qVod096WHH0jsGklvM&#43;VU2uY="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.7d272de35b410fb165377550cdf9c4d3a80fbbcc961e111914e4d5c0eaf5729f.css"
+    integrity="sha256-fSct41tBD7FlN3VQzfnE06gPu8yWHhEZFOTVwOr1cp8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.55d8333481b07a08e07cf6f37319753a2b47e99f4c395394c5747b48b495aa9b.css"
+    integrity="sha256-VdgzNIGwegjgfPbzcxl1OitH6Z9MOVOUxXR7SLSVqps="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.a7448d02590b43449364b6b5922ed9af5410abb4de4238412a830316dedb850b.css"
+    integrity="sha256-p0SNAlkLQ0STZLa1ki7Zr1QQq7TeQjhBKoMDFt7bhQs="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.9ed75a5d670c953fe4df935937674b4646f92674367e9e66eb995bb04e821647.css"
+    integrity="sha256-ntdaXWcMlT/k35NZN2dLRkb5JnQ2fp5m65lbsE6CFkc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://evan-hossain.github.io/post/learning-vim/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.d6d329d93844b162e8bed1e915619625ca91687952177552b9b3e211014a2957.js"
+      integrity="sha256-1tMp2ThEsWLovtHpFWGWJcqRaHlSF3VSubPiEQFKKVc="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Learning Vim"/>
+<meta name="twitter:description" content="Like a lot of people, Vim has always been a mystery to me. I never really tried to understand or give it a shot until very recently."/>
+
+
+
+  
+  <meta property="og:title" content="Learning Vim" />
+<meta property="og:description" content="Like a lot of people, Vim has always been a mystery to me. I never really tried to understand or give it a shot until very recently." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://evan-hossain.github.io/post/learning-vim/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-01-08T10:27:42+00:00" />
+<meta property="article:modified_time" content="2023-01-08T10:27:42+00:00" /><meta property="og:site_name" content="Evan Hossain" />
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "Learning Vim",
+        "headline": "Learning Vim",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Like a lot of people, Vim has always been a mystery to me. I never really tried to understand or give it a shot until very recently.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/evan-hossain.github.io\/post\/learning-vim\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": ""
+        },
+        "copyrightYear" : "2023",
+        "dateCreated": "2023-01-08T10:27:42.00Z",
+        "datePublished": "2023-01-08T10:27:42.00Z",
+        "dateModified": "2023-01-08T10:27:42.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name":  null ,
+            "url": "https://evan-hossain.github.io",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/evan-hossain.github.iofavicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "https:\/\/evan-hossain.github.io\/post\/learning-vim\/",
+        "wordCount" : "432",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "vim"
+
+    
+      
+        ,
+
+      
+      "kotlin"
+
+    ]
+    }
+  </script>
+
+
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Evan Hossain</a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Software Engineer, Google<br />Dublin, Ireland<br /></p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://www.linkedin.com/in/evan-hossain/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/evan-hossain/"
+            target="_blank"
+            rel="noopener me"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:cse.evan@gmail.com"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K0HCZDVQ3Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-K0HCZDVQ3Q');
+</script>
+</div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/kotlin/"
+              
+              title=""
+              >Kotlin</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+    <div class="post__content">
+      <h1>Learning Vim</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                
+                  Sun, Jan 8, 2023
+                
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">3-minute read</span>
+          </li>
+        </ul>
+      <p>Like a lot of people, Vim has always been a mystery to me. I never really tried to understand or give it a shot until very recently. But why now?</p>
+<h2 id="motivation">Motivation</h2>
+<p>I was looking at split keyboards for a more ergonomic setup. Besides the hectic price tags, split keyboards seem to have a rather stiff learning curve. During that research only, I stumbled upon the idea that using vim has its own ergonomic benefits since it greatly reduces hand movements. And it supposedly can make me more productive! So here I am, giving it a solid try.</p>
+<h2 id="how-i-started">How I started</h2>
+<p>I just googled &ldquo;learning vim&rdquo; or something similar and decided to start with <a href="https://github.com/iggredible/Learn-Vim">this</a> github project since it had more than 9k stars. I started this portfolio site building project around the same time. So I decided to work on this project solely using Vim and I have done so till now. But I felt it was not enough to just work on this project to be confident enough in Vim to use it as my main editing tool. I needed another way to practice it more on more diverse tasks. That&rsquo;s when I found the idea.</p>
+<h2 id="how-i-continued">How I continued</h2>
+<p>We have had quite a few holidays in December in Ireland. Besides playing with Vim, I was also trying to get comfortable using Kotlin, especially the higher order functions. Since I love solving algorithmic problems anyway, I figured it&rsquo;d be best if solved those problems in Kotlin using Vim. Of course I&rsquo;m working at a much slower pace than usual with two new tools but that&rsquo;s not the goal here. After practicing for few hours in the last couple of weeks, I feel comfortable with the basic Vim motions. Although I can&rsquo;t say I perform those intuitively yet but I&rsquo;m getting there. Another thing to note here is that I can type ~70-80 WPM if it&rsquo;s alphabets only. I suffer with numbers and punctuation. So those are somewhat hindering the learning as well. Looking back, the original goal of reducing hand movements definitely seems like a possibility.</p>
+<h2 id="tools">Tools</h2>
+<p>For this portfolio project, I use iTerm only and edit the text in the terminal. But for the algorithmic problems, I&rsquo;m using Intellij community edition with Kotlin and IdeaVim plugins.</p>
+<h2 id="whats-next">What&rsquo;s next</h2>
+<p>I&rsquo;ll continue practicing Vim at home for a few more weeks before fully switching to it for my daily job. In the meantime, I plan to upload the Kotlin codes I write in the <a href="https://evan-hossain.github.io/kotlin/">Kotlin</a> posts. This shall allow me to keep practicing and also remain motivated to keep the portfolio updated.</p>
+
+
+  <h3>Related Posts</h3>
+  <ul>
+    
+      <li><a href="/kotlin/lc-number-of-good-paths/">Leetcode: Number of Good Paths Solution in Kotlin</a></li>
+    
+      <li><a href="/kotlin/lc-binary-tree-preorder-traversal/">Leetcode: Binary Tree Preorder Traversal in Kotlin</a></li>
+    
+      <li><a href="/kotlin/lc-max-points-on-a-line/">Leetcode: Max Points on a Line in Kotlin</a></li>
+    
+  </ul>
+
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="/tags/vim/">vim</a><a class="tag" href="/tags/kotlin/">kotlin</a></span>
+
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>comments</h2>
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "evan-portfolio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        
+        2023
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K0HCZDVQ3Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-K0HCZDVQ3Q');
+</script>
+</body>
+</html>
