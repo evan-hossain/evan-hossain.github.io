@@ -1,6 +1,7 @@
 baseURL = 'https://evan-hossain.github.io'
 languageCode = 'en-us'
 title = 'Evan Hossain'
+author = 'Evan Hossain'
 theme = 'anatole'
 summaryLength = 20
 disqusShortname = "evan-portfolio"
