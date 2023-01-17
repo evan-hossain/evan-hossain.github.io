@@ -6,7 +6,19 @@
     <description>Recent content in kotlin on Evan Hossain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Jan 2023 16:48:41 +0000</lastBuildDate><atom:link href="https://evan-hossain.github.io/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Jan 2023 21:51:22 +0000</lastBuildDate><atom:link href="https://evan-hossain.github.io/tags/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode: Flip String to Monotone Increasing Kotlin Solution</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-flip-string-to-monotone-increasing/</link>
+      <pubDate>Tue, 17 Jan 2023 21:51:22 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-flip-string-to-monotone-increasing/</guid>
+      
+        <description>926. Flip String to Monotone Increasing At each position, consider two scenarios:
+How many digits do we need to change if we want to make everything 0 until this position and everything 1 starting from this index?</description>
+      
+    </item>
+    
     <item>
       <title>Leetcode: Number of Good Paths Solution in Kotlin</title>
       <link>https://evan-hossain.github.io/kotlin/lc-number-of-good-paths/</link>
