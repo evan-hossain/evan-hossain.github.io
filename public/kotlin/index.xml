@@ -6,7 +6,62 @@
     <description>Recent content in Kotlins on Evan Hossain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Jan 2023 21:51:22 +0000</lastBuildDate><atom:link href="https://evan-hossain.github.io/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Jan 2023 11:39:24 +0000</lastBuildDate><atom:link href="https://evan-hossain.github.io/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode: Maximum Sum Circular Subarray Solution in Kotlin</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-maximum-sum-circular-subarray/</link>
+      <pubDate>Sun, 22 Jan 2023 11:39:24 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-maximum-sum-circular-subarray/</guid>
+      
+        <description>918. Maximum Sum Circular Subarray The maximum sum problem can be solved using the well known Kadane&amp;rsquo;s algo. But this problem becomes a bit special because of the circular element.</description>
+      
+    </item>
+    
+    <item>
+      <title>Leetcode: Subarray Sums Divisible by K Solution in Kotlin</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-subarray-sums-divisible-by-k/</link>
+      <pubDate>Sun, 22 Jan 2023 11:34:44 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-subarray-sums-divisible-by-k/</guid>
+      
+        <description>974. Subarray Sums Divisible by K Well known sub-array divisibility problem. Only catch was that the numbers could be negative. So don&amp;rsquo;t forget to handle modulus for negative values.</description>
+      
+    </item>
+    
+    <item>
+      <title>Leetcode: Non Decreasing Subsequences Solution in Kotlin</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-non-decreasing-subsequences/</link>
+      <pubDate>Sun, 22 Jan 2023 11:24:05 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-non-decreasing-subsequences/</guid>
+      
+        <description>491. Non-decreasing Subsequences Brute force recursive idea works. The only tricky part is handling the situation when there are a group of same digit.</description>
+      
+    </item>
+    
+    <item>
+      <title>Leetcode: Restore Ip Addresses Solution in Kotlin</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-restore-ip-addresses/</link>
+      <pubDate>Sun, 22 Jan 2023 11:16:39 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-restore-ip-addresses/</guid>
+      
+        <description>93. Restore IP Addresses This problem could be solved in recursive or iterative way. I chose to code in the iterative way.</description>
+      
+    </item>
+    
+    <item>
+      <title>Leetcode: Palindrome Partitioning Solution in Kotlin</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-palindrome-partitioning/</link>
+      <pubDate>Sun, 22 Jan 2023 10:26:53 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-palindrome-partitioning/</guid>
+      
+        <description>131. Palindrome Partitioning The idea is to recursively partition the given string and check if the newly created partition forms a palindrome.</description>
+      
+    </item>
+    
     <item>
       <title>Leetcode: Flip String to Monotone Increasing Kotlin Solution</title>
       <link>https://evan-hossain.github.io/kotlin/lc-flip-string-to-monotone-increasing/</link>
