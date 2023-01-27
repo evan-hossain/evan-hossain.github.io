@@ -6,7 +6,18 @@
     <description>Recent content in Kotlins on Evan Hossain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Jan 2023 11:39:24 +0000</lastBuildDate><atom:link href="https://evan-hossain.github.io/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Jan 2023 20:57:58 +0000</lastBuildDate><atom:link href="https://evan-hossain.github.io/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode: Concatenated Words Solution in Kotlin</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-concatenated-words/</link>
+      <pubDate>Fri, 27 Jan 2023 20:57:58 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-concatenated-words/</guid>
+      
+        <description>472. Concatenated Words The problem basically asks to check which of the given words can be composed by concatenating two or more other words.</description>
+      
+    </item>
+    
     <item>
       <title>Leetcode: Maximum Sum Circular Subarray Solution in Kotlin</title>
       <link>https://evan-hossain.github.io/kotlin/lc-maximum-sum-circular-subarray/</link>
