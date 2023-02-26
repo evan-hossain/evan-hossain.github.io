@@ -10,7 +10,7 @@
   <title>
     
         |
-        Leetcode: Number of Good Paths Solution in Kotlin
+        Leetcode: Shortest Path With Alternating Colors
       
 
     
@@ -87,7 +87,7 @@ Dublin, Ireland
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-  <link rel="canonical" href="https://evan-hossain.github.io/kotlin/lc-number-of-good-paths/" />
+  <link rel="canonical" href="https://evan-hossain.github.io/kotlin/lc-shortest-path-with-alternating-colors/" />
 
   
   
@@ -116,18 +116,18 @@ Dublin, Ireland
 
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode: Number of Good Paths Solution in Kotlin"/>
-<meta name="twitter:description" content="2421. Number of Good Paths Solution I found the problem somewhat harder than typical leetcode problems. My solution idea is as follows:"/>
+<meta name="twitter:title" content="Leetcode: Shortest Path With Alternating Colors"/>
+<meta name="twitter:description" content="1129. Shortest Path with Alternating Colors Pretty much usual BFS problem with another dimension, colors. We need to store a Pair of NodeId and Color in the queue instead of only nodes."/>
 
 
 
   
-  <meta property="og:title" content="Leetcode: Number of Good Paths Solution in Kotlin" />
-<meta property="og:description" content="2421. Number of Good Paths Solution I found the problem somewhat harder than typical leetcode problems. My solution idea is as follows:" />
+  <meta property="og:title" content="Leetcode: Shortest Path With Alternating Colors" />
+<meta property="og:description" content="1129. Shortest Path with Alternating Colors Pretty much usual BFS problem with another dimension, colors. We need to store a Pair of NodeId and Color in the queue instead of only nodes." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://evan-hossain.github.io/kotlin/lc-number-of-good-paths/" /><meta property="article:section" content="kotlin" />
-<meta property="article:published_time" content="2023-01-15T16:48:41+00:00" />
-<meta property="article:modified_time" content="2023-01-15T16:48:41+00:00" /><meta property="og:site_name" content="Evan Hossain" />
+<meta property="og:url" content="https://evan-hossain.github.io/kotlin/lc-shortest-path-with-alternating-colors/" /><meta property="article:section" content="kotlin" />
+<meta property="article:published_time" content="2023-02-26T19:15:08+00:00" />
+<meta property="article:modified_time" content="2023-02-26T19:15:08+00:00" /><meta property="og:site_name" content="Evan Hossain" />
 
 
 
@@ -140,12 +140,12 @@ Dublin, Ireland
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "articleSection": "kotlin",
-        "name": "Leetcode: Number of Good Paths Solution in Kotlin",
-        "headline": "Leetcode: Number of Good Paths Solution in Kotlin",
+        "name": "Leetcode: Shortest Path With Alternating Colors",
+        "headline": "Leetcode: Shortest Path With Alternating Colors",
         "alternativeHeadline": "",
         "description": "
       
-        2421. Number of Good Paths Solution I found the problem somewhat harder than typical leetcode problems. My solution idea is as follows:
+        1129. Shortest Path with Alternating Colors Pretty much usual BFS problem with another dimension, colors. We need to store a Pair of NodeId and Color in the queue instead of only nodes.
 
 
       
@@ -156,7 +156,7 @@ Dublin, Ireland
         "isFamilyFriendly": "true",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/evan-hossain.github.io\/kotlin\/lc-number-of-good-paths\/"
+            "@id": "https:\/\/evan-hossain.github.io\/kotlin\/lc-shortest-path-with-alternating-colors\/"
         },
         "author" : {
             "@type": "Person",
@@ -175,9 +175,9 @@ Dublin, Ireland
             "name": ""
         },
         "copyrightYear" : "2023",
-        "dateCreated": "2023-01-15T16:48:41.00Z",
-        "datePublished": "2023-01-15T16:48:41.00Z",
-        "dateModified": "2023-01-15T16:48:41.00Z",
+        "dateCreated": "2023-02-26T19:15:08.00Z",
+        "datePublished": "2023-02-26T19:15:08.00Z",
+        "dateModified": "2023-02-26T19:15:08.00Z",
         "publisher":{
             "@type":"Organization",
             "name":  null ,
@@ -194,19 +194,19 @@ Dublin, Ireland
       ]
 
     ,
-        "url" : "https:\/\/evan-hossain.github.io\/kotlin\/lc-number-of-good-paths\/",
-        "wordCount" : "402",
+        "url" : "https:\/\/evan-hossain.github.io\/kotlin\/lc-shortest-path-with-alternating-colors\/",
+        "wordCount" : "208",
         "genre" : [ ],
         "keywords" : [ 
       
-      "leetcode"
+      "kotlin"
 
     
       
         ,
 
       
-      "kotlin"
+      "leetcode"
 
     ]
     }
@@ -414,59 +414,52 @@ Dublin, Ireland
   >
     
     <div class="post__content">
-      <h1>Leetcode: Number of Good Paths Solution in Kotlin</h1>
-      <h2 id="2421-number-of-good-paths">2421. Number of Good Paths</h2>
-<h2 id="solution">Solution</h2>
-<p>I found the problem somewhat harder than typical leetcode problems. My solution idea is as follows:</p>
-<p>We need to build the tree by connecting nodes, starting from the nodes with minimum weights to maximum. This will ensure that whenever we are connecting two different nodes, the max weight of those two nodes will be greater or equal any other weights already considered in the relevant sub trees. We will use disjoint set to maintain and connect different trees. Weights of the edges will be maximum value of the related nodes.</p>
-<p>Once we start picking up the edges in order, look at the two sub trees of the two nodes in question using disjoint set. Additionally, we need to maintain two information for each of these sub trees:</p>
-<ol>
-<li>What is the maximum value in the sub tree?</li>
-<li>How many times the maximum value occurs in those sub trees?</li>
-</ol>
-<p>With these two information maintained in two maps, we can find if the maximum values match in each of the new sub tree we are about to connect. If the values match, increment the result. Also update the two maps accordingly.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Edge</span>(<span style="color:#66d9ef">val</span> from: Int, <span style="color:#66d9ef">val</span> to: Int, <span style="color:#66d9ef">val</span> weight: Int)
+      <h1>Leetcode: Shortest Path With Alternating Colors</h1>
+      <h2 id="1129-shortest-path-with-alternating-colors">1129. Shortest Path with Alternating Colors</h2>
+<p>Pretty much usual BFS problem with another dimension, colors. We need to store a Pair of NodeId and Color in the queue instead of only nodes. And keep track of distances accordingly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> java.util.*
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">lateinit</span> <span style="color:#66d9ef">var</span> parent: IntArray
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">numberOfGoodPaths</span>(vals: IntArray, edges: Array&lt;IntArray&gt;): Int {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">val</span> sortedEdges = edges.map { Edge(<span style="color:#66d9ef">it</span>.first(), <span style="color:#66d9ef">it</span>.last(), vals[<span style="color:#66d9ef">it</span>.first()].coerceAtLeast(vals[<span style="color:#66d9ef">it</span>.last()])) }
-</span></span><span style="display:flex;"><span>            .sortedWith(compareBy { <span style="color:#66d9ef">it</span>.weight })
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">val</span> n = vals.size
-</span></span><span style="display:flex;"><span>        parent = IntArray(n) { -<span style="color:#ae81ff">1</span> }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">val</span> valCount = mutableMapOf&lt;Pair&lt;Int, Int&gt;, Int&gt;() <span style="color:#75715e">// count of values in sub trees
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">val</span> maxVal = mutableMapOf&lt;Int, Int&gt;() <span style="color:#75715e">// maintain max value in sub trees
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> result = n
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (edge <span style="color:#66d9ef">in</span> sortedEdges) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> uRoot = root(edge.from)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> vRoot = root(edge.to)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> uRootMaxVal = maxVal.getOrDefault(uRoot, vals[edge.from])
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> vRootMaxVal = maxVal.getOrDefault(vRoot, vals[edge.to])
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> uVal = valCount.getOrDefault(Pair(uRoot, uRootMaxVal), <span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> vVal = valCount.getOrDefault(Pair(vRoot, vRootMaxVal), <span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (uRootMaxVal <span style="color:#f92672">==</span> vRootMaxVal) result <span style="color:#f92672">+=</span> uVal * vVal
-</span></span><span style="display:flex;"><span>            join(edge.from, edge.to)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> newRoot = root(edge.from)
-</span></span><span style="display:flex;"><span>            valCount[Pair(newRoot, edge.weight)] = valCount.getOrDefault(
-</span></span><span style="display:flex;"><span>                Pair(uRoot, edge.weight), (vals[edge.from] <span style="color:#f92672">==</span> edge.weight).compareTo(<span style="color:#66d9ef">false</span>)
-</span></span><span style="display:flex;"><span>            ) + valCount.getOrDefault(
-</span></span><span style="display:flex;"><span>                Pair(vRoot, edge.weight), (vals[edge.to] <span style="color:#f92672">==</span> edge.weight).compareTo(<span style="color:#66d9ef">false</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">shortestAlternatingPaths</span>(n: Int, redEdges: Array&lt;IntArray&gt;, blueEdges: Array&lt;IntArray&gt;): IntArray {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">val</span> dist = Array(n) { Array(<span style="color:#ae81ff">2</span>) { mutableMapOf&lt;Pair&lt;Int, Int&gt;, Int&gt;() } }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">val</span> queue = LinkedList&lt;Pair&lt;Triple&lt;Int, Int, Int&gt;, Int&gt;&gt;().also {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">it</span>.addAll(
+</span></span><span style="display:flex;"><span>                listOf(
+</span></span><span style="display:flex;"><span>                    Pair(Triple(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>), RED),
+</span></span><span style="display:flex;"><span>                    Pair(Triple(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>), BLUE)
+</span></span><span style="display:flex;"><span>                )
 </span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>            maxVal[newRoot] = edge.weight
 </span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>        dist[<span style="color:#ae81ff">0</span>][RED][Pair(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>)] = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        dist[<span style="color:#ae81ff">0</span>][BLUE][Pair(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>)] = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">val</span> adjList = Array(n) { Array(<span style="color:#ae81ff">2</span>) { mutableListOf&lt;Int&gt;() } }
+</span></span><span style="display:flex;"><span>        redEdges.forEach { adjList[<span style="color:#66d9ef">it</span>.first()][RED].add(<span style="color:#66d9ef">it</span>.last()) }
+</span></span><span style="display:flex;"><span>        blueEdges.forEach { adjList[<span style="color:#66d9ef">it</span>.first()][BLUE].add(<span style="color:#66d9ef">it</span>.last()) }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (queue.isNotEmpty()) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> <span style="color:#960050;background-color:#1e0010">(</span>node, color) = queue.pop()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> <span style="color:#960050;background-color:#1e0010">(</span>u, last, secondLast) = node
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> lastPair = Pair(last, secondLast)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> newPair = Pair(u, last)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> newColor = <span style="color:#ae81ff">1</span> - color
+</span></span><span style="display:flex;"><span>            adjList[u][newColor].forEach { v <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">val</span> newDist = dist[u][color][lastPair]<span style="color:#f92672">!!</span> + <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">val</span> vDist = dist[v][newColor].getOrDefault(newPair, <span style="color:#a6e22e">Int</span>.MAX_VALUE)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (newDist &lt; vDist) {
+</span></span><span style="display:flex;"><span>                    queue.add(Pair(Triple(v, u, last), newColor))
+</span></span><span style="display:flex;"><span>                    dist[v][newColor][newPair] = newDist
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> (<span style="color:#ae81ff">0</span> until n).map { node <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>            (<span style="color:#ae81ff">0</span> until <span style="color:#ae81ff">2</span>).mapNotNull { color <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>                dist[node][color].values.min()
+</span></span><span style="display:flex;"><span>            }.min()
+</span></span><span style="display:flex;"><span>        }.map { <span style="color:#66d9ef">it</span> <span style="color:#f92672">?:</span> -<span style="color:#ae81ff">1</span> }.toIntArray()
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">root</span>(u: Int): Int = <span style="color:#66d9ef">if</span> (parent[u] &lt; <span style="color:#ae81ff">0</span>) u <span style="color:#66d9ef">else</span> root(parent[u])
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">join</span>(u: Int, v: Int) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> uRoot = root(u)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> vRoot = root(v)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (uRoot <span style="color:#f92672">==</span> vRoot) <span style="color:#66d9ef">return</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (parent[vRoot] &lt; parent[uRoot]) uRoot = vRoot.also { vRoot = uRoot } <span style="color:#75715e">// rank optimisation
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        parent[uRoot] <span style="color:#f92672">+=</span> parent[vRoot]
-</span></span><span style="display:flex;"><span>        parent[vRoot] = uRoot
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">companion</span> <span style="color:#66d9ef">object</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">val</span> RED = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">val</span> BLUE = <span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div>
@@ -487,7 +480,7 @@ Dublin, Ireland
       
 
       
-        <span><a class="tag" href="/tags/leetcode/">leetcode</a><a class="tag" href="/tags/kotlin/">kotlin</a></span>
+        <span><a class="tag" href="/tags/kotlin/">kotlin</a><a class="tag" href="/tags/leetcode/">leetcode</a></span>
 
 
       

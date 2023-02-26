@@ -10,7 +10,7 @@
   <title>
     
         |
-        Leetcode: Number of Good Paths Solution in Kotlin
+        Leetcode: Fruit Into Baskets
       
 
     
@@ -87,7 +87,7 @@ Dublin, Ireland
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-  <link rel="canonical" href="https://evan-hossain.github.io/kotlin/lc-number-of-good-paths/" />
+  <link rel="canonical" href="https://evan-hossain.github.io/kotlin/lc-fruit-into-baskets/" />
 
   
   
@@ -116,18 +116,18 @@ Dublin, Ireland
 
   
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode: Number of Good Paths Solution in Kotlin"/>
-<meta name="twitter:description" content="2421. Number of Good Paths Solution I found the problem somewhat harder than typical leetcode problems. My solution idea is as follows:"/>
+<meta name="twitter:title" content="Leetcode: Fruit Into Baskets"/>
+<meta name="twitter:description" content="904. Fruit Into Baskets Maintain a sliding window to keep track of indexes of at most two different types of fruits."/>
 
 
 
   
-  <meta property="og:title" content="Leetcode: Number of Good Paths Solution in Kotlin" />
-<meta property="og:description" content="2421. Number of Good Paths Solution I found the problem somewhat harder than typical leetcode problems. My solution idea is as follows:" />
+  <meta property="og:title" content="Leetcode: Fruit Into Baskets" />
+<meta property="og:description" content="904. Fruit Into Baskets Maintain a sliding window to keep track of indexes of at most two different types of fruits." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://evan-hossain.github.io/kotlin/lc-number-of-good-paths/" /><meta property="article:section" content="kotlin" />
-<meta property="article:published_time" content="2023-01-15T16:48:41+00:00" />
-<meta property="article:modified_time" content="2023-01-15T16:48:41+00:00" /><meta property="og:site_name" content="Evan Hossain" />
+<meta property="og:url" content="https://evan-hossain.github.io/kotlin/lc-fruit-into-baskets/" /><meta property="article:section" content="kotlin" />
+<meta property="article:published_time" content="2023-02-26T18:34:21+00:00" />
+<meta property="article:modified_time" content="2023-02-26T18:34:21+00:00" /><meta property="og:site_name" content="Evan Hossain" />
 
 
 
@@ -140,12 +140,12 @@ Dublin, Ireland
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "articleSection": "kotlin",
-        "name": "Leetcode: Number of Good Paths Solution in Kotlin",
-        "headline": "Leetcode: Number of Good Paths Solution in Kotlin",
+        "name": "Leetcode: Fruit Into Baskets",
+        "headline": "Leetcode: Fruit Into Baskets",
         "alternativeHeadline": "",
         "description": "
       
-        2421. Number of Good Paths Solution I found the problem somewhat harder than typical leetcode problems. My solution idea is as follows:
+        904. Fruit Into Baskets Maintain a sliding window to keep track of indexes of at most two different types of fruits.
 
 
       
@@ -156,7 +156,7 @@ Dublin, Ireland
         "isFamilyFriendly": "true",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/evan-hossain.github.io\/kotlin\/lc-number-of-good-paths\/"
+            "@id": "https:\/\/evan-hossain.github.io\/kotlin\/lc-fruit-into-baskets\/"
         },
         "author" : {
             "@type": "Person",
@@ -175,9 +175,9 @@ Dublin, Ireland
             "name": ""
         },
         "copyrightYear" : "2023",
-        "dateCreated": "2023-01-15T16:48:41.00Z",
-        "datePublished": "2023-01-15T16:48:41.00Z",
-        "dateModified": "2023-01-15T16:48:41.00Z",
+        "dateCreated": "2023-02-26T18:34:21.00Z",
+        "datePublished": "2023-02-26T18:34:21.00Z",
+        "dateModified": "2023-02-26T18:34:21.00Z",
         "publisher":{
             "@type":"Organization",
             "name":  null ,
@@ -194,19 +194,19 @@ Dublin, Ireland
       ]
 
     ,
-        "url" : "https:\/\/evan-hossain.github.io\/kotlin\/lc-number-of-good-paths\/",
-        "wordCount" : "402",
+        "url" : "https:\/\/evan-hossain.github.io\/kotlin\/lc-fruit-into-baskets\/",
+        "wordCount" : "183",
         "genre" : [ ],
         "keywords" : [ 
       
-      "leetcode"
+      "kotlin"
 
     
       
         ,
 
       
-      "kotlin"
+      "leetcode"
 
     ]
     }
@@ -414,59 +414,29 @@ Dublin, Ireland
   >
     
     <div class="post__content">
-      <h1>Leetcode: Number of Good Paths Solution in Kotlin</h1>
-      <h2 id="2421-number-of-good-paths">2421. Number of Good Paths</h2>
-<h2 id="solution">Solution</h2>
-<p>I found the problem somewhat harder than typical leetcode problems. My solution idea is as follows:</p>
-<p>We need to build the tree by connecting nodes, starting from the nodes with minimum weights to maximum. This will ensure that whenever we are connecting two different nodes, the max weight of those two nodes will be greater or equal any other weights already considered in the relevant sub trees. We will use disjoint set to maintain and connect different trees. Weights of the edges will be maximum value of the related nodes.</p>
-<p>Once we start picking up the edges in order, look at the two sub trees of the two nodes in question using disjoint set. Additionally, we need to maintain two information for each of these sub trees:</p>
-<ol>
-<li>What is the maximum value in the sub tree?</li>
-<li>How many times the maximum value occurs in those sub trees?</li>
-</ol>
-<p>With these two information maintained in two maps, we can find if the maximum values match in each of the new sub tree we are about to connect. If the values match, increment the result. Also update the two maps accordingly.</p>
+      <h1>Leetcode: Fruit Into Baskets</h1>
+      <h2 id="904-fruit-into-baskets">904. Fruit Into Baskets</h2>
+<p>Maintain a sliding window to keep track of indexes of at most two different types of fruits. Maximum length of this window is our answer.</p>
+<p>Now, whenever we need to replace one fruit to try extending the window with a new one, how to choose which fruit to remove? Since the existing fruits could appear at various places. Just removing the one that appeared earlier might not be optimal. This is where the indexes come into play. We should keep the fruit which appeared latest and remove the other one, and calculate the window size accordingly.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Edge</span>(<span style="color:#66d9ef">val</span> from: Int, <span style="color:#66d9ef">val</span> to: Int, <span style="color:#66d9ef">val</span> weight: Int)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">lateinit</span> <span style="color:#66d9ef">var</span> parent: IntArray
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">numberOfGoodPaths</span>(vals: IntArray, edges: Array&lt;IntArray&gt;): Int {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">val</span> sortedEdges = edges.map { Edge(<span style="color:#66d9ef">it</span>.first(), <span style="color:#66d9ef">it</span>.last(), vals[<span style="color:#66d9ef">it</span>.first()].coerceAtLeast(vals[<span style="color:#66d9ef">it</span>.last()])) }
-</span></span><span style="display:flex;"><span>            .sortedWith(compareBy { <span style="color:#66d9ef">it</span>.weight })
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">val</span> n = vals.size
-</span></span><span style="display:flex;"><span>        parent = IntArray(n) { -<span style="color:#ae81ff">1</span> }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">val</span> valCount = mutableMapOf&lt;Pair&lt;Int, Int&gt;, Int&gt;() <span style="color:#75715e">// count of values in sub trees
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">val</span> maxVal = mutableMapOf&lt;Int, Int&gt;() <span style="color:#75715e">// maintain max value in sub trees
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> result = n
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (edge <span style="color:#66d9ef">in</span> sortedEdges) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> uRoot = root(edge.from)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> vRoot = root(edge.to)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> uRootMaxVal = maxVal.getOrDefault(uRoot, vals[edge.from])
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> vRootMaxVal = maxVal.getOrDefault(vRoot, vals[edge.to])
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> uVal = valCount.getOrDefault(Pair(uRoot, uRootMaxVal), <span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> vVal = valCount.getOrDefault(Pair(vRoot, vRootMaxVal), <span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (uRootMaxVal <span style="color:#f92672">==</span> vRootMaxVal) result <span style="color:#f92672">+=</span> uVal * vVal
-</span></span><span style="display:flex;"><span>            join(edge.from, edge.to)
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">val</span> newRoot = root(edge.from)
-</span></span><span style="display:flex;"><span>            valCount[Pair(newRoot, edge.weight)] = valCount.getOrDefault(
-</span></span><span style="display:flex;"><span>                Pair(uRoot, edge.weight), (vals[edge.from] <span style="color:#f92672">==</span> edge.weight).compareTo(<span style="color:#66d9ef">false</span>)
-</span></span><span style="display:flex;"><span>            ) + valCount.getOrDefault(
-</span></span><span style="display:flex;"><span>                Pair(vRoot, edge.weight), (vals[edge.to] <span style="color:#f92672">==</span> edge.weight).compareTo(<span style="color:#66d9ef">false</span>)
-</span></span><span style="display:flex;"><span>            )
-</span></span><span style="display:flex;"><span>            maxVal[newRoot] = edge.weight
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">totalFruit</span>(fruits: IntArray): Int {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">val</span> runningMap = mutableMapOf&lt;Int, Int&gt;()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> result = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> currentBest = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(fruit <span style="color:#66d9ef">in</span> fruits.withIndex()){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(runningMap.containsKey(fruit.<span style="color:#66d9ef">value</span>) <span style="color:#f92672">||</span> runningMap.size <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>){
+</span></span><span style="display:flex;"><span>                currentBest<span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>                result = result.coerceAtLeast(currentBest)
+</span></span><span style="display:flex;"><span>                runningMap[fruit.<span style="color:#66d9ef">value</span>] = fruit.index  <span style="color:#75715e">// latest index of that fruit
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// need to remove one, optimal is keeping the one which appeared latest
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">val</span> keyWithMinValue = runningMap.minBy { <span style="color:#66d9ef">it</span>.<span style="color:#66d9ef">value</span> }<span style="color:#f92672">!!</span>
+</span></span><span style="display:flex;"><span>            runningMap.remove(keyWithMinValue.key)
+</span></span><span style="display:flex;"><span>            currentBest = fruit.index - keyWithMinValue.<span style="color:#66d9ef">value</span> <span style="color:#75715e">// this is still remaining
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            runningMap[fruit.<span style="color:#66d9ef">value</span>] = fruit.index
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">root</span>(u: Int): Int = <span style="color:#66d9ef">if</span> (parent[u] &lt; <span style="color:#ae81ff">0</span>) u <span style="color:#66d9ef">else</span> root(parent[u])
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">join</span>(u: Int, v: Int) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> uRoot = root(u)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> vRoot = root(v)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (uRoot <span style="color:#f92672">==</span> vRoot) <span style="color:#66d9ef">return</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (parent[vRoot] &lt; parent[uRoot]) uRoot = vRoot.also { vRoot = uRoot } <span style="color:#75715e">// rank optimisation
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        parent[uRoot] <span style="color:#f92672">+=</span> parent[vRoot]
-</span></span><span style="display:flex;"><span>        parent[vRoot] = uRoot
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div>
@@ -487,7 +457,7 @@ Dublin, Ireland
       
 
       
-        <span><a class="tag" href="/tags/leetcode/">leetcode</a><a class="tag" href="/tags/kotlin/">kotlin</a></span>
+        <span><a class="tag" href="/tags/kotlin/">kotlin</a><a class="tag" href="/tags/leetcode/">leetcode</a></span>
 
 
       

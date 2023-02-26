@@ -6,7 +6,85 @@
     <description>Recent content on Evan Hossain</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Feb 2023 11:06:01 +0000</lastBuildDate><atom:link href="https://evan-hossain.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Feb 2023 20:34:43 +0000</lastBuildDate><atom:link href="https://evan-hossain.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode: Minimize Deviation in Array</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-minimize-deviation-in-array/</link>
+      <pubDate>Sun, 26 Feb 2023 20:34:43 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-minimize-deviation-in-array/</guid>
+      
+        <description>1675. Minimize Deviation in Array A couple of things to notice.
+Odd elements can only be changed once, which makes them even.</description>
+      
+    </item>
+    
+    <item>
+      <title>Leetcode: Ipo</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-ipo/</link>
+      <pubDate>Sun, 26 Feb 2023 20:01:44 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-ipo/</guid>
+      
+        <description>502. IPO Note that, at any point, if we know what is the most profitable project within our current budget, we can solve this problem.</description>
+      
+    </item>
+    
+    <item>
+      <title>Leetcode: Single Element in a Sorted Array</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-single-element-in-a-sorted-array/</link>
+      <pubDate>Sun, 26 Feb 2023 19:45:24 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-single-element-in-a-sorted-array/</guid>
+      
+        <description>540. Single Element in a Sorted Array There are simpler methods like finding xor of all elements. However, the time complexity would be O(N) in that case.</description>
+      
+    </item>
+    
+    <item>
+      <title>Leetcode: Minimum Fuel Cost to Report to the Capital</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-minimum-fuel-cost-to-report-to-the-capital/</link>
+      <pubDate>Sun, 26 Feb 2023 19:30:02 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-minimum-fuel-cost-to-report-to-the-capital/</guid>
+      
+        <description>2477. Minimum Fuel Cost to Report to the Capital At each node, we just need to know how many people are passing through this node.</description>
+      
+    </item>
+    
+    <item>
+      <title>Leetcode: Shortest Path With Alternating Colors</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-shortest-path-with-alternating-colors/</link>
+      <pubDate>Sun, 26 Feb 2023 19:15:08 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-shortest-path-with-alternating-colors/</guid>
+      
+        <description>1129. Shortest Path with Alternating Colors Pretty much usual BFS problem with another dimension, colors. We need to store a Pair of NodeId and Color in the queue instead of only nodes.</description>
+      
+    </item>
+    
+    <item>
+      <title>Leetcode: as Far From Land as Possible</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-as-far-from-land-as-possible/</link>
+      <pubDate>Sun, 26 Feb 2023 19:05:10 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-as-far-from-land-as-possible/</guid>
+      
+        <description>1162. As Far from Land as Possible This is a classic BFS problem. Put all the land cells in the queue and run Breadth First Search to find farthest water cell or vice versa.</description>
+      
+    </item>
+    
+    <item>
+      <title>Leetcode: Fruit Into Baskets</title>
+      <link>https://evan-hossain.github.io/kotlin/lc-fruit-into-baskets/</link>
+      <pubDate>Sun, 26 Feb 2023 18:34:21 +0000</pubDate>
+      
+      <guid>https://evan-hossain.github.io/kotlin/lc-fruit-into-baskets/</guid>
+      
+        <description>904. Fruit Into Baskets Maintain a sliding window to keep track of indexes of at most two different types of fruits.</description>
+      
+    </item>
+    
     <item>
       <title>Leetcode: Shuffle the Array Solution in Kotlin</title>
       <link>https://evan-hossain.github.io/kotlin/lc-shuffle-the-array/</link>
